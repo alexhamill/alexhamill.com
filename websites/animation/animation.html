@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="animation.css">
+    <title>animation</title>
+    <script defer src="animation.js"></script>
+</head>
+<body>
+<div class="cube cube1 stop" id="cube1"></div>
+<div class="cube cube2 stop" id="cube2"></div>
+<div class="cube cube3 stop" id="cube3"></div>
+<h3 class="score">0</h3>
+<div class="settings">
+    <form>
+        <label for="code">enter code:</label><br>
+        <input type="text" class="code" id="code">
+        <button type="button" onclick="decode()">load</button>
+      </form> 
+      <br>
+      <p>save code:</p>
+      <p id="displaycode">code goes here</p>
+      <button id="copybutton" onclick="copytext()">copy code</button>
+</div>
+<div id="sb">⚙</div>
+<div id="storebutton">&#9195;</div>
+<div id="storecontainer">
+    <img src="imges/clicker.png" alt="CLICKER" width="30%" height="30%">
+    <button type="button" onclick="addclicker()" id="b">BUY CLICKER: <strong id="clickercost">15</strong> points</button>
+    <img src="imges/multiup.png" alt="multiup" width="30%" height="30%">
+    <button type="button" onclick="upmulti()" id="mub">BUY MORE MULTI: <strong id="multicost">15</strong> points</button>
+    <img src="imges/speedfoot.png" alt="speedfoot" width="30%" height="30%">
+    <button type="button" onclick="speedupgrade()" style="width: 30%">BUY CLICKER SPEED <strong id="speedupgradenumber">15</strong> points</button>
+</div>
+<div id="newscontainer">
+    <h1>UPDATE 0</h1>
+    <p>added exponenial growth to the store cost and buffed multi by a huge amount</p>
+</div>
+<div id="newsbutton">📣</div>
+</body>
+
+</html>

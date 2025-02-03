@@ -1,0 +1,175 @@
+.cube{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    animation-iteration-count: infinite;
+    background-color: red;
+    transition: 2s ease;
+    z-index: -10;
+}
+.cube1{
+    animation: rotat 5s infinite;
+}
+.cube2{
+    animation: rotat2 5s infinite;
+}
+.cube3{
+    animation: rotat3 5s infinite;
+}
+
+@keyframes rotat {
+    0%{left: 0%;top: 0%; background-color: red;}
+    25%{left: calc(100% - 50px);top:0%; background-color: blue;}
+    50%{top: calc(100% - 50px);left: calc(100% - 50px); background-color: rgb(0, 213, 255);}
+    75%{top: calc(100% - 50px);left: 0%; background-color: rgb(86, 169, 18);}
+    100%{top: 0%;left: 0%; background-color: red;}
+}
+@keyframes rotat2 {
+    0%{left: 50px;top: 50px; background-color: red;}
+    25%{left: calc(100% - 100px);top: 50px; background-color: blue;}
+    50%{top: calc(100% - 100px);left: calc(100% - 100px); background-color: rgb(0, 213, 255);}
+    75%{top: calc(100% - 100px);left: 50px; background-color: rgb(86, 169, 18);}
+    100%{top: 50px;left: 50px; background-color: red;}
+}
+@keyframes rotat3 {
+    0%{left: 100px;top: 100px; background-color: red;}
+    25%{left: calc(100% - 150px);top: 100px; background-color: blue;}
+    50%{top: calc(100% - 150px);left: calc(100% - 150px); background-color: rgb(0, 213, 255);}
+    75%{top: calc(100% - 150px);left: 100px; background-color: rgb(86, 169, 18);}
+    100%{top: 100px;left: 100px; background-color: red;}
+}
+@keyframes pulse {
+    0%, 100%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+}
+@keyframes colors {
+    0%{background-color: red;}
+    25%{background-color: blue;}
+    50%{background-color: rgb(0, 213, 255);}
+    75%{background-color: rgb(86, 169, 18);}
+    100%{background-color: red;}
+}
+@keyframes textcolors {
+    0%{color: red;}
+    25%{color: blue;}
+    50%{color: rgb(0, 213, 255);}
+    75%{color: rgb(86, 169, 18);}
+    100%{color: red;}
+}
+
+
+.cube.active{
+    animation: colors 5s infinite;
+    
+}
+body{
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+/* html {
+    cursor: url('favicon.ico'), default;
+  } */
+.score{
+    animation: colors 5s infinite;
+    position: absolute;
+    left: 10%;
+    top: 50%;  
+    padding: 10px;
+}
+#code{
+    width: 100%;
+}
+.settings{
+    background-color: white;
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    width: 10%;
+    transition: .3s ease;
+    display: none;
+    animation: colors 5s infinite;
+}
+.settings.active{
+    display: flex;
+    flex-wrap: wrap;
+}
+#sb{
+    font-size: 30px;
+    cursor: pointer;
+    left: 95%;
+    top: 0%;
+    position: absolute;
+    animation: textcolors 5s infinite;
+}
+#displaycode{
+    overflow-x: scroll;
+    width: 90%;
+}
+#storecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: 2s ease;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    height: 60%;
+    width: 60%;
+    animation: colors 5s infinite;
+    transition: .5s ease;
+    
+}
+#storebutton{
+    animation: textcolors 5s infinite;
+    cursor: pointer;
+    position: absolute;
+    left: 90%;
+    
+}
+#storecontainer.active{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 10;
+    top: 20%;
+    transition: .5s ease;
+} 
+#b{
+    width: 30%;
+
+}
+.clickers{
+    background-size: cover; 
+    background-position: center; 
+    background-image:  url('imges/download.png');
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    transition: 2s ease;
+}
+#mub{
+    width: 30%;
+}
+#newscontainer{
+    background-color: #ffffff;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    
+    top: 0%;
+    z-index: -1;
+    transition: 1s ease;
+    left:100%;
+}
+#newscontainer.active{
+    left: 70%;
+    background-color: #ffffff;
+    transition: 1s ease;
+}
+#newsbutton{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 85%;
+    cursor: pointer;
+}
