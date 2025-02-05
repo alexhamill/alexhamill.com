@@ -1,0 +1,45 @@
+body, .test{
+    background-size:initial;
+    background-color: cadetblue;
+    background-image: radial-gradient(circle, transparent 0%, transparent 20%, black 100%);
+}
+.test{
+    height: 100px;
+    width: 100px;
+    left: calc(50% - 50px);
+    position: absolute;
+    animation: scrollin 3s infinite;
+}
+
+#arrow{
+    background-color: white;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: calc(98% - 30px);
+    left: calc(50% - 30px);
+    border-left: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(225deg) skew(10deg, 10deg);
+}
+
+@keyframes scrollin {
+    0%{
+        top: -10%;
+    }
+    75%{
+        top: 50%;
+    }
+    80%{
+        top: 49%;
+    }
+    85%{
+        top: 50%;
+    }
+    90%{
+        top: 50%;
+    }
+    100%{
+        top: 50%;
+    }
+}
