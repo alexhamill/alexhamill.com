@@ -43,3 +43,25 @@ body, .test{
         top: 50%;
     }
 }
+.link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 4em;
+    font-family: "Arvo", serif;
+}
+.shadow{
+    box-shadow: 0px 0px 10px 5px black; 
+}
+#homebutton{
+    text-decoration: none;
+    background-color: tomato;
+    color: white;
+    position: absolute;
+    left: 95%;
+    top: 5%;
+}
+#linktext{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
